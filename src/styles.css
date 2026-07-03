@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: hsl(200, 100%, 5%);
+  color: hsl(200, 100%, 95%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.btn {
+  background-color: hsl(200, 100%, 50%, 0.1);
+  border: 1px solid hsl(200, 100%, 50%);
+  color: hsl(200, 100%, 50%);
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background-color: hsl(200, 100%, 50%, 0.2);
+}
+
+.btn.btn-danger {
+  background-color: hsl(0, 100%, 50%, 0.1);
+  border: 1px solid hsl(0, 100%, 50%);
+  color: hsl(0, 100%, 50%);
+}
+
+.btn.btn-danger:hover,
+.btn.btn-danger:focus-visible {
+  background-color: hsl(0, 100%, 50%, 0.2);
+}
+
+.new-item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-self: stretch;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.new-item-form label {
+  font-size: 1.25rem;
+}
+
+.new-item-form input {
+  outline: none;
+  border: 1px solid hsl(200, 100%, 40%);
+  background-color: hsl(200, 100%, 30%, 0.1);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  color: hsl(200, 100%, 90%);
+  font-size: 1rem;
+}
+
+.new-item-form input:focus {
+  border-color: hsl(200, 100%, 50%);
+}
+
+.header {
+  margin: 1.5rem 0 0.5rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.25rem;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.list li label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.list li input[type="checkbox"] {
+  width: 1em;
+  height: 1em;
+  accent-color: hsl(200, 100%, 50%);
+  cursor: pointer;
+}
+
+.list li label:has(input:checked) {
+  text-decoration: line-through;
+  color: hsl(200, 20%, 60%);
+}
